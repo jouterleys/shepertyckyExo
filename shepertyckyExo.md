@@ -1,30 +1,24 @@
----
-title: "ShepertyckyExo"
-author: Jereme Outerleys
-date: 2021-08-26
-output:
-  github_document: 
-  fig_width: 9
-  fig_height: 8
----
-
-```{r setup, include=FALSE}
-library(knitr)
-library(rmarkdown)
-library(bookdown)
-knitr::opts_chunk$set(echo = TRUE)
-```
+ShepertyckyExo
+================
+Jereme Outerleys
+2021-08-26
 
 ## Summary
 
-3 overground walking trials were collected using Theia3D. Markerless data were collected with 8 Sony RX0II cameras with a frame rate of 60 Hz (actual 59.9401 Hz). 
+3 overground walking trials were collected using Theia3D. Markerless
+data were collected with 8 Sony RX0II cameras with a frame rate of 60 Hz
+(actual 59.9401 Hz).
 
 ## Data Processing
 
-An 8 Hz GCVSPL filter was applied to the markerless kinematics data. Heel strike events were kinematically determined in Visual3D and exported using the *Export_Data_To_Ascii_File* function. Data were time normalized to full gait cycles (101 points).
+An 8 Hz GCVSPL filter was applied to the markerless kinematics data.
+Heel strike events were kinematically determined in Visual3D and
+exported using the *Export\_Data\_To\_Ascii\_File* function. Data were
+time normalized to full gait cycles (101 points).
 
 ### Attach R packages
-```{r, message=FALSE}
+
+``` r
 #library(devtools)
 #install_github("jouterleys/v3dR")
 library(v3dR)
@@ -34,7 +28,8 @@ library(here)
 ```
 
 ### Build loopV3DR
-```{r loopV3DR}
+
+``` r
 # Build a function to do something on each dataframe
 loopV3DR <- function(full_filepath){
   
@@ -57,7 +52,8 @@ loopV3DR <- function(full_filepath){
 ```
 
 ### Define paths and build data frame
-``` {r import}
+
+``` r
 # Define path to the subject folders
 resultsPath <- here('S00001')
 
@@ -77,23 +73,11 @@ df <- as.data.frame(df)
 # we will remove the first letter of the signal_name
 df$signal_names <- as.factor(substring(df$signal_names, 2))
 df$signal_names <- fct_relevel(df$signal_names, "ANKLE_ANGLE", "KNEE_ANGLE", "HIP_ANGLE")
-
-
 ```
-
-``` {r component_labeller, echo=FALSE}
-component_names <- c(
-  `X`="Sagittal  Plane",
-  `Y`="Frontal Plane",
-  `Z`="Transverse Plane"
-)
-
-```
-
 
 ## Kinematics
-```{r kinematics_right_fig, fig.height = 8, fig.width = 9, fig.align = "center", dpi=300, echo=TRUE, fig.cap = "Left and right lower limb joint kinematics. Note: Dorsi-flexion, knee flexion, and hip flexion are positive (+). Ankle inversion, knee adduction and hip adduction is positive (+). Toe-in, knee internal rotation, and hip internal rotation are positive (+)." }
 
+``` r
 df %>%
   subset(select = -c(c3d_name, instance)) %>%
   filter(grepl("ANGLE", signal_names)) %>%
@@ -110,8 +94,16 @@ df %>%
  scale_x_continuous(expand = c(0, 0)) +
   xlab('Percent of Gait Cycle (%)') +
   ylab('Joint Angle (Degrees)')
-
 ```
 
+<div class="figure" style="text-align: center">
 
+<img src="shepertyckyExo_files/figure-gfm/kinematics_right_fig-1.png" alt="Left and right lower limb joint kinematics. Note: Dorsi-flexion, knee flexion, and hip flexion are positive (+). Ankle inversion, knee adduction and hip adduction is positive (+). Toe-in, knee internal rotation, and hip internal rotation are positive (+)."  />
+<p class="caption">
+Left and right lower limb joint kinematics. Note: Dorsi-flexion, knee
+flexion, and hip flexion are positive (+). Ankle inversion, knee
+adduction and hip adduction is positive (+). Toe-in, knee internal
+rotation, and hip internal rotation are positive (+).
+</p>
 
+</div>
