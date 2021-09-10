@@ -21,13 +21,14 @@ Many devices have been developed to harvest energy from walking or
 running, but their use often comes at cost to the wearer in the form of
 increased metabolic demand. Not this exoskeleton, according to a new
 Science study.
-<a href="https://t.co/nTOCqLcCkn">https://t.co/nTOCqLcCkn</a>
-<a href="https://t.co/m67eOlHSm0">pic.twitter.com/m67eOlHSm0</a>
 </p>
 — Science Magazine
 <a href="https://twitter.com/ScienceMagazine/status/1398021328746201094?ref_src=twsrc%5Etfw">May
 27, 2021</a>
 </blockquote>
+</center>
+<center>
+<img src="tweet.gif"/>
 </center>
 
 Check out Michael’s recent report published in Science to get more
