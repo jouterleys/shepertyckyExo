@@ -5,7 +5,7 @@ Jereme Outerleys
 
 <!--html_preserve-->
 
-<img src="https://www.queensu.ca/sites/default/files/assets/pages/QueensLogo_red.png" alt="logo" width="200px" heigth="200px" style="position:absolute; top:0; right:0; padding:10px;"/><!--/html_preserve-->
+<img src="https://www.queensu.ca/sites/default/files/assets/pages/QueensLogo_red.png" width="200px" heigth="200px"/><!--/html_preserve-->
 
 ## Summary
 
@@ -28,7 +28,6 @@ Science study.
 <a href="https://twitter.com/ScienceMagazine/status/1398021328746201094?ref_src=twsrc%5Etfw">May
 27, 2021</a>
 </blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </center>
 
 Check out Michael’s recent report published in Science to get more
