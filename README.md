@@ -3,13 +3,63 @@ ShepertyckyExo
 Jereme Outerleys
 2021-08-26
 
+<!--html_preserve-->
+
+<img src="https://www.queensu.ca/sites/default/files/assets/pages/QueensLogo_red.png" alt="logo" width="200px" heigth="200px" style="position:absolute; top:0; right:0; padding:10px;"/><!--/html_preserve-->
+
 ## Summary
+
+Michael Shepertycky, PhD, came by the HMRL with the exoskeleton he’s
+develop that can harvest energy during walking but also reduces the
+metabolic energy consumption of the user. We tested out how well Theia3D
+could track him while wearing the Exo!
+
+<center>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+Many devices have been developed to harvest energy from walking or
+running, but their use often comes at cost to the wearer in the form of
+increased metabolic demand. Not this exoskeleton, according to a new
+Science study.
+<a href="https://t.co/nTOCqLcCkn">https://t.co/nTOCqLcCkn</a>
+<a href="https://t.co/m67eOlHSm0">pic.twitter.com/m67eOlHSm0</a>
+</p>
+— Science Magazine
+<a href="https://twitter.com/ScienceMagazine/status/1398021328746201094?ref_src=twsrc%5Etfw">May
+27, 2021</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+
+Check out Michael’s recent report published in Science to get more
+details on it’s performance.
+
+<center>
+<blockquote>
+<p>
+
+<div id="refs" class="references csl-bib-body hanging-indent">
+
+<div id="ref-Shepertycky2021" class="csl-entry">
+
+Shepertycky, Michael, Sarah Burton, Andrew Dickson, Yan-Fei Liu, and
+Qingguo Li. 2021. “Removing Energy with an Exoskeleton Reduces the
+Metabolic Cost of Walking.” *Science* 372 (6545): 957–60.
+<https://doi.org/10.1126/science.aba9947>.
+
+</div>
+
+</div>
+
+</p>
+</blockquote>
+</center>
+
+## Data Collection and Processing
 
 3 overground walking trials were collected using Theia3D. Markerless
 data were collected with 8 Sony RX0II cameras with a frame rate of 60 Hz
 (actual 59.9401 Hz).
-
-## Data Processing
 
 An 8 Hz GCVSPL filter was applied to the markerless kinematics data.
 Heel strike events were kinematically determined in Visual3D and
